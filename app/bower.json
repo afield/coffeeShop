@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "homepage": "https://github.com/afield/BrainStation",
+  "authors": [
+    "afield <afield@brainstation.io>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "ui-router#^0.2.18"
+  }
+}

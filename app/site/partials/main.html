@@ -1,0 +1,22 @@
+
+
+ <h1>Coffee Shop</h1>
+    <button ng-click="ctrl.displayShops()">All Shops</button>
+        <h4>{{ctrl.shops}}</h4>
+ <form>
+      Search by ID:<br>
+      <input type="text" name="shopId" ng-model="ctrl.shopId"><br>
+      <button type="submit" ng-click="ctrl.searchId()">Search</button>
+     <h4>{{ctrl.searchResult}}</h4>
+    
+</form>
+ <form>
+     Shop Name:<br>
+      <input type="text" name="name" ng-model="ctrl.name"><br>
+        Shop Address:<br>
+      <input type="text" name="address" ng-model="ctrl.address"><br>
+        Shop Rating:<br>
+      <input type="text" name="rating" ng-model="ctrl.rating"><br>
+    <button type="submit" ng-click="ctrl.addShop()">Search</button>
+     <h4>{{ctrl.createdMessage}}</h4>
+</form>
