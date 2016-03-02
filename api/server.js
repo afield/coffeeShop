@@ -1,5 +1,5 @@
 var express = require('express');
-var port = 8080;
+var port = 80;
 var bodyParser = require('body-parser');
 var models = require('./models/CoffeeShop.js');
 //declare express app
