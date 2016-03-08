@@ -1,5 +1,9 @@
+try{
+ var env = require('./config/env_dev');
+}catch(err){
+ var env = require('./config/env_prod');
+}
 var express = require('express');
-var port = 80;
 var bodyParser = require('body-parser');
 var models = require('./models/CoffeeShop.js');
 //declare express app
@@ -35,9 +39,9 @@ app.use('/', apiRoutes);
 //------------------------------------------
 
 //Connect to local host
-app.listen(port, function(){
+app.listen(env.port, function(){
     //when I send an http request to THIS URL, it will connect whatever I am sending it from to "server.js"
-   console.log('Listening on http://localhost:' + port);
+   console.log('Listening on ' + env.host +':'+ env. port);
     console.log('Stop Server with CTRL + C');
 });
 
