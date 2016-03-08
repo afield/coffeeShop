@@ -4,19 +4,38 @@
     <button ng-click="ctrl.displayShops()">All Shops</button>
         <h4>{{ctrl.shops}}</h4>
  <form>
-      Search by ID:<br>
-      <input type="text" name="shopId" ng-model="ctrl.shopId"><br>
+     <h3>Search by ID:</h3>
+      <input type="text" name="shopId" ng-model="ctrl.searchShopId"><br>
       <button type="submit" ng-click="ctrl.searchId()">Search</button>
      <h4>{{ctrl.searchResult}}</h4>
-    
+</form>
+<form>
+    <h3>Delete by ID:</h3>
+      <input type="text" name="shopId" ng-model="ctrl.delShopId"><br>
+      <button type="submit" ng-click="ctrl.deleteId()">Delete</button>
+     <h4>{{ctrl.deletedMessage}}</h4>
 </form>
  <form>
-     Shop Name:<br>
-      <input type="text" name="name" ng-model="ctrl.name"><br>
+     <h3>Shop Name:</h3>
+      <input type="text" name="name" ng-model="ctrl.addName"><br>
         Shop Address:<br>
-      <input type="text" name="address" ng-model="ctrl.address"><br>
+      <input type="text" name="address" ng-model="ctrl.addAddress"><br>
         Shop Rating:<br>
-      <input type="text" name="rating" ng-model="ctrl.rating"><br>
-    <button type="submit" ng-click="ctrl.addShop()">Search</button>
+      <input type="text" name="rating" ng-model="ctrl.addRating"><br>
+    <button type="submit" ng-click="ctrl.addShop()">Add New</button>
      <h4>{{ctrl.createdMessage}}</h4>
+</form>
+<h3>Update by Shop ID:</h3>
+       Shop Id:<br>
+    <input type="text" name="shopId" ng-model="ctrl.updateShopId"><br>
+        Shop Name:<br>
+     <input type="text" name="name" ng-model="ctrl.updateName"><br>
+        Shop Address:<br>
+      <input type="text" name="address" ng-model="ctrl.updateAddress"><br>
+        Shop Rating:<br>
+      <input type="text" name="rating" ng-model="ctrl.updateRating"><br>
+    <button type="submit" ng-click="ctrl.updateId()">Update</button>
+    <h4>{{ctrl.updatedMessage}}</h4>
+<form>
+    
 </form>
