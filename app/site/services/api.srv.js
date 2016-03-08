@@ -2,7 +2,7 @@ app.service('api', ApiService);
 
 function ApiService($http){
     this.http = $http; 
-    this.BASE_URL = 'http://localhost:80';
+    this.BASE_URL = location.origin;
 }
 
 ApiService.prototype.getRequest = function(endpoint,data){
