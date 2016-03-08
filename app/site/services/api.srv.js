@@ -2,6 +2,7 @@ app.service('api', ApiService);
 
 function ApiService($http){
     this.http = $http; 
+    console.log(location);
     this.BASE_URL = location.origin;
 }
 

@@ -42,7 +42,7 @@ app.use('/', apiRoutes);
 //Connect to local host
 app.listen(env.port, function(){
     //when I send an http request to THIS URL, it will connect whatever I am sending it from to "server.js"
-   console.log('Listening on ' + env.host +':'+ env. port);
+   console.log('Listening on ' + env.host +':'+ env.port);
     console.log('Stop Server with CTRL + C');
 });
 
