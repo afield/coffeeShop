@@ -13,6 +13,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: "site/partials/main.html",
       controller: "ShopCtrl as ctrl"
     });
+
 });
 
 

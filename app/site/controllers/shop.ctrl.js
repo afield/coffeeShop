@@ -7,7 +7,7 @@ function ShopCtrl(api, $stateParams){
     ctrl.shops;
     ctrl.searchShopId;
     ctrl.delShopId;
-    ctrl.updateId;
+    ctrl.updateShopId;
     ctrl.searchResult;
     ctrl.createdMessage;
     ctrl.updatedMessage;
@@ -58,14 +58,14 @@ ShopCtrl.prototype.addShop = function(){
     
 };
 
-ShopCtrl.prototype.updateShopId = function(){
+ShopCtrl.prototype.updateId = function(){
     var ctrl = this;
     var data = {
         "name" : ctrl.updateName,
         "address" : ctrl.updateAddress,
         "rating" : ctrl.updateRating
     }   
-    ctrl.api.postRequest('/shop/update/',ctrl.updateId,data).then(function(response){
+    ctrl.api.postRequest('/shop/update/',ctrl.updateShopId,data).then(function(response){
         console.log(response)
         ctrl.updatedMessage = 'Shop Updated';
     });

@@ -71,22 +71,20 @@ router.put('/shops/add', function(req,res){
 router.post('/shop/update/:shopId', function(req,res){
    console.log('Updated shop with id: ' + req.params.shopId);
     var _shop = req.body;
-    var update = {
-        name:"_shop.name",
-        address:"_shop.address",
-        rating:"_shop.rating"
-    }
-    var query = {"_id":req.params.shopId}
-    CoffeeShop.update(query,update,{},function(err,shop){
+    console.log(_shop);
+    var updateCoffeeShop = {
+        name : req.body.name,
+        address : req.body.address,
+        rating : req.body.rating
+    };
+    var query = {"_id" : req.params.shopId};
+    CoffeeShop.update( query,updateCoffeeShop,{}, function(err,shop){
         if(err){
             console.log(err);
-            res.status(400)
-                .json({err:err})
         }else{
             console.log(shop);
-            res.json({shop:shop});
         }
-    })
+    });
 });
 
 //endpoint: http://localhost:8080/shops/delete
