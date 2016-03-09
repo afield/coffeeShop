@@ -1,8 +1,6 @@
-try{
-    var env = require('./config/env_dev');
-}catch(err){
+
     var env = require('./config/env_prod');
-}
+
 
 var express = require('express');
 var bodyParser = require('body-parser');
